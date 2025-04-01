@@ -48,7 +48,7 @@ After running the analysis.py program, a text file titled 'summary' is created. 
 
 In addition to this, at the start of the file, a brief summary table is generated. In this, for each variable, the count is verified, matching that in the 'iris.names' file, along with confirmation of the mean, standard deviation, minimum measurement, maximum measurement, and the quartiles. While this information is already provided as part of the data set, capturing the same information in the 'summary' file, verifies that the data is being pulled in correctly for further assessment
 
-Overview of mean and standard deviation? ***
+Overview of mean and standard deviation? **
 
 ## References
 
