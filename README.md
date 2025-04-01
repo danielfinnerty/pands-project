@@ -14,7 +14,7 @@ This project is for demonstrating the ability to analyse the Fisher Iris data se
 - Week 2
   - Download data set to repository.  
   - Create Python file.  
-  - Write coding to log summary to text file.  
+  - Write coding to log summary of each variable to text file.  
 
 - Week 3
   - Create code for histogram generation.  
@@ -43,7 +43,12 @@ The data set itself consists of 150 samples, broken into equal quantities of 50 
 
 There is no other data captured, but by running the Analysis program through the process documented below, clear analysis can be seen with discussion of such in the project_comments Jupyter notebook.
 
+## Summary.txt file Review
+After running the analysis.py program, a text file titled 'summary' is created. The difference with this file is that not only does it present the measurements again, this time they are in a string format rather than the original CSV file format, making them easier visually. In addition to this, headers for each column are now added, allowing clarity on which measurements are sepal length, sepal width, petal length, and petal width.
 
+In addition to this, at the start of the file, a brief summary table is generated. In this, for each variable, the count is verified, matching that in the 'iris.names' file, along with confirmation of the mean, standard deviation, minimum measurement, maximum measurement, and the quartiles. While this information is already provided as part of the data set, capturing the same information in the 'summary' file, verifies that the data is being pulled in correctly for further assessment
+
+Overview of mean and standard deviation? ***
 
 ## References
 
