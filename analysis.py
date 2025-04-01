@@ -5,6 +5,8 @@
 # Author: Daniel Finnerty
 
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 FILENAME = "iris.data"
 
@@ -19,12 +21,19 @@ with open(FILENAME, "r+") as f:
 NEW_FILENAME = "summary.txt"
 
 with open(NEW_FILENAME, "w") as n:
-    # write data to file as a string
-    # source: https://www.geeksforgeeks.org/python-pandas-dataframe-to_string/
-    n.write(data.to_string(header=True, index=True))
     # create high level overview
     stats = data.describe()
-    n.write('\n' + '\n' + stats.to_string())
+    n.write(stats.to_string())
+    # write data to file as a string
+    # source: https://www.geeksforgeeks.org/python-pandas-dataframe-to_string/
+    n.write('\n' + '\n' + data.to_string(header=True, index=True))
+    
+# create histograms of each variable
+#data_sepal_l = data[['sepal length','class']]
+#print(data_sepal_l)
+#sns.histplot(data, x = 'sepal length', hue = 'class')
+#plt.show()
 
-
-print(data.describe())
+data_sepal_l = data[['sepal length']]
+plt.hist(data_sepal_l, bins = 9)
+plt.show()
