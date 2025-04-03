@@ -27,13 +27,16 @@ with open(NEW_FILENAME, "w") as n:
     # write data to file as a string
     # source: https://www.geeksforgeeks.org/python-pandas-dataframe-to_string/
     n.write('\n' + '\n' + data.to_string(header=True, index=True))
-    
-# create histograms of each variable
-#data_sepal_l = data[['sepal length','class']]
-#print(data_sepal_l)
-#sns.histplot(data, x = 'sepal length', hue = 'class')
-#plt.show()
 
-data_sepal_l = data[['sepal length']]
-plt.hist(data_sepal_l, bins = 9)
-plt.show()
+def hist_plot(variables):
+    for variable in variables:
+        #(f'data_{variable}') = data[['{variable}','class']]
+        #print (f'data_{variable}')
+        sns.histplot(data, x = variable, hue = 'class', bins = 20)
+        plt.title(f'{variable} histogram plot')
+        plt.savefig(f'{variable} hist.png')
+        plt.close()
+
+variables = ['sepal length', 'sepal width', 'petal length', 'petal width']
+hist_plot(variables)
+
