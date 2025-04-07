@@ -43,6 +43,54 @@ The data set itself consists of 150 samples, broken into equal quantities of 50 
 
 There is no other data captured, but by running the Analysis program through the process documented below, clear analysis can be seen with discussion of such in the project_comments Jupyter notebook.
 
+## Running analysis.py program
+The analysis.py file needs to be ran, to create the summary file, and various plots which form parts of the data review, and is the basis for which the assessment is compiled in the project_comments notebook. To run the file:
+
+1. Download anaconda (python) from:  
+https://www.anaconda.com/download
+    * When installing, ensure to check below 2 boxes:  
+        i.  Add to PATH variable  
+        ii. Make this version your default Python  
+<br>
+  
+2. Download and install VS Code from:  
+https://code.visualstudio.com/Download  
+<br>
+
+3. Go to Terminal in VSCode, and set where you want the repository to be stored.  
+<br>
+
+4. Once set, and still in terminal, enter the below code.
+
+```
+git clone https://github.com/danielfinnerty/principles_of_data_analytics.git
+```
+<br>
+
+5. Now set new repository as directory  
+<br>
+
+6. Enter the below code to set the pull mode for repository  
+
+```
+git config pull.rebase false
+```  
+<br>
+
+7. Pull all content from the repository
+
+```
+git pull
+```  
+<br>
+
+8. Enter the below code to run the analysis.py program
+
+```
+python analysis.py
+```
+
+
 ## Summary.txt file Review
 After running the analysis.py program, a text file titled 'summary' is created. The difference with this file is that not only does it present the measurements again, this time they are in a string format rather than the original CSV file format, making them easier visually. In addition to this, headers for each column are now added, allowing clarity on which measurements are sepal length, sepal width, petal length, and petal width.
 
