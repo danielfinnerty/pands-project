@@ -19,7 +19,7 @@ with open(FILENAME, "r+") as f:
     data.columns = [ "sepal length", "sepal width", "petal length", "petal width", "class"] 
 
 NEW_FILENAME = "summary.txt"
-'''
+
 with open(NEW_FILENAME, "w") as n:
     # create high level overview
     stats = data.describe()
@@ -39,7 +39,7 @@ def hist_plot(variables):
 
 variables = ['sepal length', 'sepal width', 'petal length', 'petal width']
 hist_plot(variables)
-'''
+
 sns.pairplot(data, hue = 'class', diag_kind = 'hist', diag_kws = {'bins' : 20}) # https://seaborn.pydata.org/generated/seaborn.pairplot.html, https://builtin.com/articles/seaborn-pairplot
 plt.show()
 
