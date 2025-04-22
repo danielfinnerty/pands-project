@@ -55,5 +55,4 @@ hist_plot(variables)
 
 sns.pairplot(data, hue = 'class', diag_kind = 'hist', diag_kws = {'bins' : 20})
 plt.show()
-
 # source for bins solution:https://stackoverflow.com/questions/59696426/how-to-change-the-number-of-bins-in-seaborns-pairplot-function
