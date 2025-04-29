@@ -22,6 +22,7 @@ with open(FILENAME, "r+") as f:
     # adding columns to data
     data.columns = [ "sepal length", "sepal width", "petal length", "petal width", "class"] 
 
+
 # specify new file name
 NEW_FILENAME = "summary.txt"
 
@@ -54,5 +55,35 @@ hist_plot(variables)
 # Task 3.3
 
 sns.pairplot(data, hue = 'class', diag_kind = 'hist', diag_kws = {'bins' : 20})
-plt.show()
+plt.savefig('iris pairplot.png')
+plt.close()
 # source for bins solution:https://stackoverflow.com/questions/59696426/how-to-change-the-number-of-bins-in-seaborns-pairplot-function
+
+
+# Task  3.4
+# source for regression line in pairplot: https://stackoverflow.com/questions/50722972/change-the-regression-line-colour-of-seaborns-pairplot
+iris_pair_reg = sns.pairplot(data, hue='class', diag_kind = 'hist', diag_kws = {'bins' : 20}, corner=True)
+#plt.show()
+
+# single line: https://stackoverflow.com/questions/76217544/how-to-fit-regression-lines-on-each-non-diagonal-segment-of-a-pairplot-while-re
+def regline(x, y, **kwargs):
+    sns.regplot(data=kwargs['data'], x=x.name, y=y.name, scatter=False, color=kwargs['color'])
+
+iris_pair_reg.map_offdiag(regline, color='red', data=data)
+plt.savefig('pairplot & reg line.png')
+plt.close()
+
+
+# correlation coefficients
+# source: https://stackoverflow.com/questions/74538936/how-to-use-pandas-dataframe-corr-with-only-a-specific-number-of-columns
+correl_coeff = data.iloc[: , 0:4].corr() 
+
+# colours source: https://matplotlib.org/stable/users/explain/colors/colormaps.html
+sns.heatmap(correl_coeff, cmap = 'RdYlGn', annot = True)
+plt.title('Correlation Coefficients')
+# ticks source: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xticks.html
+plt.xticks(rotation = 20)
+plt.yticks(rotation = 20)
+plt.savefig('correlation coeffs.png')
+
+
