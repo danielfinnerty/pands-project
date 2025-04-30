@@ -79,20 +79,22 @@ def regline(x, y, **kwargs):
 
 # merge the regression lines to the pairplot
 iris_pair_reg.map_offdiag(regline, color='red', data=data)
+# save as .png file
 plt.savefig('pairplot & regline.png')
 plt.close()
 
 
-# correlation coefficients
-# source: https://stackoverflow.com/questions/74538936/how-to-use-pandas-dataframe-corr-with-only-a-specific-number-of-columns
-correl_coeff = data.iloc[: , 0:4].corr() 
+# calculate correlation coefficients
+correl_coeff = data.iloc[: , 0:4].corr()
 
-# colours source: https://matplotlib.org/stable/users/explain/colors/colormaps.html
+# create heatmap of correlation coefficients
 sns.heatmap(correl_coeff, cmap = 'RdYlGn', annot = True)
+# add title
 plt.title('Correlation Coefficients')
-# ticks source: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xticks.html
+# modify ticks orientation 
 plt.xticks(rotation = 20)
 plt.yticks(rotation = 20)
+# save as .png file
 plt.savefig('correlation coeffs.png')
 
 
