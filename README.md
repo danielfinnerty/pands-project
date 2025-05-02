@@ -3,7 +3,7 @@ by: Daniel Finnerty
 
 ## Introduction
 
-This project is for demonstrating the ability to analyse the Fisher Iris data set using Python through both recently learned knowledge and research. In addition to the Python program (analysis.py), the Jupyter notebook outlines reasoning for certain coding, discussions of outputs, and references for any external material used.
+This project is for demonstrating the ability to analyse the Fisher Iris data set using Python, through both recently learned knowledge as part of the module and further research. In addition to the Python program (analysis.py), the Jupyter notebook outlines reasoning for certain coding, discussions of outputs, and references for any external material used.
 
 ## Tasks
 - Week 1
@@ -27,7 +27,7 @@ This project is for demonstrating the ability to analyse the Fisher Iris data se
 - Week 5
   - Review full program, outputs and findings.  
   - Investigate if any further analysis is required.  
-  - Creaate associated code.  
+  - Create associated code.  
 
 - Week 6
   - Final run through and adjustments as required. 
@@ -35,16 +35,16 @@ This project is for demonstrating the ability to analyse the Fisher Iris data se
   - <ins>**Submission - No later than May 12th.**</ins>  
 
 ## Data Set Research Summary
-Through online reasearch of the Fisher iris data set, it can be clearly seen from the extensive availability of reviews and assessments that it is a regularly used source of data for people to practice their analystics knowledge and capabilities <sup>[1], [2]</sup>.
+Through online research of the Fisher iris data set, it can be clearly seen from the extensive availability of reviews and assessments that it is a regularly used source of data for people to practice their analytics knowledge and capabilities <sup>[1], [2]</sup>.
 
-As documented, it is one of the most popular data sets used for learning and statistics. This can be attributed to several factors, but noteably 2 distinct aspects help make it so favourable. Its simplicity allows for new and less experienced researchers to easily understand the data presented to them, and apply analytical learnings with ease. In addition to this, it is also suggest that the versatility of the data set allows clear differences accross the different species to be discovered using various methods.
+As documented, it is one of the most popular data sets used for learning and statistics. This can be attributed to several factors, but notably 2 distinct aspects help make it so favourable. Its simplicity allows for new and less experienced researchers to easily understand the data presented to them, and apply analytical learnings with ease. In addition to this, it is also suggested that the versatility of the data set allows clear differences across the different species to be discovered using various methods.
 
 The data set itself consists of 150 samples, broken into equal quantities of 50 for each of the 3 species; Setosa, Versicolor, and Virginica. Each of the 150 samples contains 4 different measurements; sepal length, sepal width, petal length, and petal width, all of which are measured in centimetres.
 
-There is no other data captured, but by running the Analysis program through the process documented below, clear analysis can be seen with discussion of such in the project_comments Jupyter notebook.
+There is no other data captured, but by running the analysis.py program through the process documented below, clear outputs can be seen with discussion of such in the project_comments Jupyter notebook.
 
 ## Running analysis.py program
-The analysis.py file needs to be ran, to create the summary file, and various plots which form parts of the data review, and is the basis for which the assessment is compiled in the project_comments notebook. To run the file:
+The analysis.py file needs to be run to create the summary file, and various plots which form parts of the data review, and is the basis for which the assessment is compiled in the project_comments notebook. To run the file:
 
 1. Download anaconda (python) from:  
 https://www.anaconda.com/download
@@ -57,10 +57,10 @@ https://www.anaconda.com/download
 https://code.visualstudio.com/Download  
 <br>
 
-3. Go to Terminal in VSCode, and set where you want the repository to be stored.  
+3. Go to Terminal in VSCode, and select where you want the repository to be stored.  
 <br>
 
-4. Once set, and still in terminal, enter the below code.
+4. Once set, and still in 'terminal', enter the below code.
 
 ```
 git clone https://github.com/danielfinnerty/principles_of_data_analytics.git
@@ -90,13 +90,6 @@ git pull
 python analysis.py
 ```
 
-
-## Summary.txt file Review
-After running the analysis.py program, a text file titled 'summary' is created. The difference with this file is that not only does it present the measurements again, this time they are in a string format rather than the original CSV file format, making them easier visually. In addition to this, headers for each column are now added, allowing clarity on which measurements are sepal length, sepal width, petal length, and petal width.
-
-In addition to this, at the start of the file, a brief summary table is generated. In this, for each variable, the count is verified, matching that in the 'iris.names' file, along with confirmation of the mean, standard deviation, minimum measurement, maximum measurement, and the quartiles. While this information is already provided as part of the data set, capturing the same information in the 'summary' file, verifies that the data is being pulled in correctly for further assessment
-
-Overview of mean and standard deviation? **
 
 ## References
 
